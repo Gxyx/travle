@@ -42,6 +42,7 @@ public class UserController {
     @ApiOperation(value = "login", notes = "用户登录接口")
     @PostMapping(value = "/login")
     public Result login(@RequestParam String phone, @RequestParam String pwd) {
+        System.err.println("请求了"+phone+" "+pwd);
         QueryWrapper<User> wrapper = new QueryWrapper<>();
         wrapper.eq("phone", phone);
         User one = userService.getOne(wrapper);

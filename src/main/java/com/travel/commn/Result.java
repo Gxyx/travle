@@ -35,6 +35,10 @@ public class Result<T> implements Serializable {
         this.code = code;
         this.data = (T) data;
     }
+
+    public Result(Object data) {
+        this.data = (T) data;
+    }
     public boolean isFlag() {
         return flag;
     }
