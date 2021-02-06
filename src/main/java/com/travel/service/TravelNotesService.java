@@ -2,6 +2,7 @@ package com.travel.service;
 
 import com.travel.entity.TravelNotes;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * <p>
