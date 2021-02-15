@@ -1,6 +1,7 @@
 package com.travel.controller;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.travel.commn.Result;
 import com.travel.commn.StatusCode;
 import com.travel.entity.TravelNotes;
@@ -87,5 +88,11 @@ public class TravelNotesController {
         return new Result(true, StatusCode.OK,"添加成功",travelNotes);
     }
 
-
+    @ApiOperation("/根据标题删除游记")
+    @DeleteMapping("/delete_title_travel_notes")
+    public Result deletetravel(@RequestParam String title){
+        QueryWrapper<TravelNotes> wrapper = new QueryWrapper<>();
+        boolean flag = travelNotesService.remove(wrapper.eq("title", title));
+        return new Result(true, StatusCode.OK,"删除成功",flag);
+    }
 }

@@ -20,5 +20,8 @@ server:
 
 file:
   root:
+    #path: root/travle/src/main/resources/static/images
     path: D:/ceshi/travle/src/main/resources/static/images
+    #path: /tmp/tomcat.8099.1683044912526902244/work/Tomcat/localhost/ROOT/root/travle/src/main/resources/static/images
+
 
